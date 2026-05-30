@@ -114,12 +114,15 @@ TW_DEFAULT_BRIGHTNESS   := 2047
 TW_EXCLUDE_APEX         := true
 TW_INCLUDE_FASTBOOTD    := true
 TWRP_INCLUDE_LOGCAT     := true
-TW_INCLUDE_PYTHON       := true
+TW_INCLUDE_PYTHON       := false
 TW_NO_SCREEN_BLANK      := true
 TW_FRAMERATE            := 120
 
 # Blacklist Goodix fingerprint. There's no reason to include this input in recovery
-TW_INPUT_BLACKLIST := "uinput-goodix"
+# TW_INPUT_BLACKLIST := "uinput-goodix"
+
+# My changes - To reduce the ramdisk size (experimental)
+TW_EXTRA_LANGUAGES := false
 
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone2/temp"
 TW_BRIGHTNESS_PATH      := "/sys/class/backlight/panel0-backlight/brightness"
